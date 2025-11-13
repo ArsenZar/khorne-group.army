@@ -164,39 +164,57 @@ background-image: url(../img/lang_border_active.png);
   max-width: 1392px;
   width: 100%;
   margin: 0 auto;
-  background-image: url("../img/bg_main.png");
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0.6),
+      /* низ — чорний на 80% */
+      rgba(0, 0, 0, 0.2)
+      /* верх — чорний на 20% */
+    ),url("../img/mainBG.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 32px;
 
-  clip-path: polygon(8px 0,
-      calc(100% - 8px) 0,
-      100% 8px,
-      100% calc(100% - 8px),
-      calc(100% - 8px) 100%,
-      8px 100%,
-      0 calc(100% - 8px),
-      0 8px);
+  clip-path: polygon(25px 0,
+      calc(100% - 25px) 0,
+      100% 25px,
+      100% calc(100% - 25px),
+      calc(100% - 25px) 100%,
+      25px 100%,
+      0 calc(100% - 25px),
+      0 25px);
 }
 
 .hero_menu{
   width: 148px;
   height: 148px;
+position: relative;
+  /* сам блок без blur, можна фон, бордери, контент і т.д. */
+  z-index: 0;
+  overflow: hidden;
+}
 
-  backdrop-filter: blur(12px);
-  /* сила розмиття */
-  -webkit-backdrop-filter: blur(12px);
-  /* для Safari */
 
-  background: rgba(225, 225, 225, 0.2);
+.hero_menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 
-  clip-path: polygon(8px 0,
-        140px 0,
-        148px 8px,
-        148px 140px,
-        140px 148px,
-        8px 148px,
-        0 140px,
-        0 8px);
+  /* твій полігон з кутами по 15px, наприклад */
+  clip-path: polygon(15px 0,
+      133px 0,
+      148px 15px,
+      148px 133px,
+      133px 148px,
+      15px 148px,
+      0 133px,
+      0 15px);
+
+      backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        background: rgba(0, 0, 0, 0.25);
+        /* легке затемнення, за бажанням */
+        z-index: -1;
+        /* щоб контент був над цим шаром */
 }
