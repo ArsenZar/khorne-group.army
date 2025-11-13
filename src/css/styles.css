@@ -5,6 +5,9 @@
   |============================
 */
 
+*{
+  box-sizing: border-box;
+}
 h1,
 h2,
 h3,
@@ -61,6 +64,10 @@ body {
   font-style: normal;
 }
 
+.row{
+  width: 100%;
+}
+
 header {
   max-width: 1392px;
   padding: 10px 0px;
@@ -68,6 +75,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .lang {
@@ -77,6 +85,7 @@ header {
 #lang_active{
   background-color: #C92020;
   color: white;
+background-image: url(../img/lang_border_active.png);
 }
 
 .lang li {
@@ -147,4 +156,47 @@ header {
   background-color: transparent;
   color: white;
   cursor: pointer;
+}
+
+/* hero */
+
+.hero{
+  max-width: 1392px;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("../img/bg_main.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 32px;
+
+  clip-path: polygon(8px 0,
+      calc(100% - 8px) 0,
+      100% 8px,
+      100% calc(100% - 8px),
+      calc(100% - 8px) 100%,
+      8px 100%,
+      0 calc(100% - 8px),
+      0 8px);
+}
+
+.hero_menu{
+  width: 148px;
+  height: 148px;
+
+  backdrop-filter: blur(12px);
+  /* сила розмиття */
+  -webkit-backdrop-filter: blur(12px);
+  /* для Safari */
+
+  background: rgba(225, 225, 225, 0.2);
+
+  clip-path: polygon(8px 0,
+        140px 0,
+        148px 8px,
+        148px 140px,
+        140px 148px,
+        8px 148px,
+        0 140px,
+        0 8px);
 }
