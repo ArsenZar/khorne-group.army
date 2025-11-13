@@ -64,10 +64,19 @@ body {
 header {
   max-width: 1392px;
   padding: 10px 0px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .lang {
   display: flex;
+}
+
+#lang_active{
+  background-color: #C92020;
+  color: white;
 }
 
 .lang li {
@@ -82,7 +91,7 @@ header {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   margin-right: 13px;
   background-color: transparent;
 
@@ -97,13 +106,13 @@ header {
 }
 
 .lang li:hover {
-  background-color: #C92020;
+  color: white;
   cursor: pointer;
   transition: 0.25s;
 }
 
 .lang li:not(:hover) {
-  background-color: #c9202000;
+  color: rgba(255, 255, 255, 0.5);
   transition: 0.25s;
 }
 
@@ -121,4 +130,21 @@ header {
       12px 100%,
       0 calc(100% - 12px),
       0 12px);
+}
+
+.button_sendApp{
+  padding: 14px 24px;
+  border-radius: 16px;
+  background-color: white;
+  font-family: 'Furore';
+  transition: 0.25s;
+  border: 1px solid white;
+
+}
+
+.button_sendApp:hover{
+  border: 1px dashed white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
 }
