@@ -161,13 +161,14 @@ background-image: url(../img/lang_border_active.png);
 /* hero */
 
 .hero{
+  position: relative;
   max-width: 1392px;
   width: 100%;
   margin: 0 auto;
   background-image: linear-gradient(to top,
       rgba(0, 0, 0, 0.6),
       /* низ — чорний на 80% */
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0.4)
       /* верх — чорний на 20% */
     ),url("../img/mainBG.jpg");
   background-position: center;
@@ -192,6 +193,7 @@ position: relative;
   /* сам блок без blur, можна фон, бордери, контент і т.д. */
   z-index: 0;
   overflow: hidden;
+  transition: 0.25s;
 }
 
 
@@ -210,11 +212,61 @@ position: relative;
       0 133px,
       0 15px);
 
-      backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
 
-        background: rgba(0, 0, 0, 0.25);
+        background: rgba(225, 225, 225, 0.05);
         /* легке затемнення, за бажанням */
         z-index: -1;
         /* щоб контент був над цим шаром */
+}
+
+.hero_menu:hover{
+
+}
+
+.button_menu {
+  width: 48px;
+  opacity: 0.6;
+}
+
+.stick_owerlay{
+  width: 148px;
+  display: flex;
+  justify-content: center;
+}
+.stick{
+  width: 1px;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.border_topleft{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: rotate(-90deg);
+}
+.border_topright {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.border_bottomleft {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: rotate(-180deg);
+}
+.border_bottomright {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  transform: rotate(90deg);
+}
+
+.hero_menu{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
