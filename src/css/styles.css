@@ -156,12 +156,12 @@ background-image: url(../img/lang_border_active.png);
   background-color: transparent;
   color: white;
   cursor: pointer;
-  box-shadow: 0 1px 80px 0 #fffefe72;
 }
 
 /* hero */
 
 .hero{
+  transition: 0.8s;
   position: relative;
   max-width: 1392px;
   width: 100%;
@@ -172,6 +172,7 @@ background-image: url(../img/lang_border_active.png);
       rgba(0, 0, 0, 0.2)
       /* верх — чорний на 20% */
     ),url("../img/mainBG.jpg");
+  background-color: rgba(0, 0, 0, 0.0);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -252,7 +253,7 @@ position: relative;
 }
 .stick{
   width: 1px;
-  height: 30vh;
+  height: 25vh;
   background-color: rgba(255, 255, 255, 0.5);
 }
 .border_topleft{
@@ -319,11 +320,25 @@ position: relative;
     /* якщо рядок довгий, буде loop */
   }
 }
+.hero_social{
+  opacity: 0.7;
+  transition: 0.25s;
+}
+.hero_social:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
 .hero_social_overlay{
-  font-size: 36px;
+  font-size: 2vw;
   color: white;
   display: flex;
   font-family: 'Furore';
+  padding: 30px 20px;
+  align-items: center;
+}
+.hero_social_overlay img{
+  margin-right: 12px;
 }
 
 .hero_social{
@@ -334,4 +349,51 @@ position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.hero:has(.flex_between:hover){
+
+
+}
+.container{
+  max-width: 1392px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Furore';
+
+}
+.wrapper_bottomHiro{
+  font-size: 28px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid #FAE9E9;
+  margin-top: 20px;
+  margin-bottom: 72px;
+}
+
+/* About us */
+
+.about_us{
+  transition: 0.8s;
+  position: relative;
+  max-width: 1392px;
+  width: 100%;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 32px;
+  height: 80vh;
+
+  clip-path: polygon(25px 0,
+    calc(100% - 25px) 0,
+    100% 25px,
+    100% calc(100% - 25px),
+    calc(100% - 25px) 100%,
+    25px 100%,
+    0 calc(100% - 25px),
+    0 25px);
+  background-color: #131313;
 }
