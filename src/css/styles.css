@@ -166,9 +166,9 @@ background-image: url(../img/lang_border_active.png);
   width: 100%;
   margin: 0 auto;
   background-image: linear-gradient(to top,
-      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4),
       /* низ — чорний на 80% */
-      rgba(0, 0, 0, 0.4)
+      rgba(0, 0, 0, 0.2)
       /* верх — чорний на 20% */
     ),url("../img/mainBG.jpg");
   background-position: center;
@@ -186,7 +186,8 @@ background-image: url(../img/lang_border_active.png);
       0 25px);
 }
 
-.hero_menu{
+.hero_menu,
+.hero_play{
   width: 148px;
   height: 148px;
 position: relative;
@@ -194,9 +195,14 @@ position: relative;
   z-index: 0;
   overflow: hidden;
   transition: 0.25s;
+    position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 }
 
 
+.hero_play::before,
 .hero_menu::before {
   content: "";
   position: absolute;
@@ -221,13 +227,21 @@ position: relative;
         /* щоб контент був над цим шаром */
 }
 
+.hero_play:hover,
 .hero_menu:hover{
-
+  background: rgba(225, 225, 225, 0.07);
+  cursor: pointer;
+}
+.hero_play:hover > .button_play,
+.hero_menu:hover > .button_menu{
+  opacity: 1;
 }
 
-.button_menu {
-  width: 48px;
+
+.button_menu,
+.button_play {
   opacity: 0.6;
+  transition: 0.25s;
 }
 
 .stick_owerlay{
@@ -264,9 +278,44 @@ position: relative;
   transform: rotate(90deg);
 }
 
-.hero_menu{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+h1{
+  font-family: 'Furore';
+    color: white;
+    -webkit-text-stroke: 2px red;
+
+}
+
+.khorne-line {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #0D0D0D;
+  /* твій фон знизу */
+}
+
+.khorne-line__inner {
+  display: inline-block;
+  animation: khorne-scroll 20s linear infinite;
+}
+
+.khorne-line__inner span {
+  font-family: 'Furore', sans-serif;
+  font-size: 96px;
+  /* піджени під свій дизайн */
+  color: #383838;
+  /* як на макеті */
+  text-transform: uppercase;
+  margin-right: 48px;
+  /* відступ між словами */
+}
+
+/* Анімація безкінечного руху вліво */
+@keyframes khorne-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+    /* якщо рядок довгий, буде loop */
+  }
 }
