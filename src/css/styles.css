@@ -167,10 +167,13 @@ background-image: url(../img/lang_border_active.png);
   width: 100%;
   margin: 0 auto;
   background-image: linear-gradient(to top,
-      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.3),
       /* низ — чорний на 80% */
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0.1)
       /* верх — чорний на 20% */
+      /* previewBig.gif */
+      /* preview.gif */
+      /* preview2.gif */
     ),url("../img/mainBG.jpg");
   background-color: rgba(0, 0, 0, 0.0);
   background-position: center;
@@ -190,6 +193,7 @@ background-image: url(../img/lang_border_active.png);
 
 .hero_menu,
 .hero_play{
+  min-width: 148px;
   width: 148px;
   height: 148px;
 position: relative;
@@ -233,6 +237,10 @@ position: relative;
 .hero_menu:hover{
   background: rgba(225, 225, 225, 0.07);
   cursor: pointer;
+}
+.hero_play:hover > .button_play,
+.hero_menu:hover > .button_menu {
+  transform: scale(1.05);
 }
 .hero_play:hover > .button_play,
 .hero_menu:hover > .button_menu{
@@ -283,7 +291,12 @@ position: relative;
 .text_stroke{
   font-family: 'Furore';
     color: transparent !important;
-    -webkit-text-stroke: 2px #383838;
+    -webkit-text-stroke: 1px #9C9C9C;
+}
+.horizontal_stroke{
+  width: 100%;
+  height: 1px;
+  background-color: white;
 }
 
 .khorne-line {
@@ -302,7 +315,7 @@ position: relative;
   font-family: 'Furore', sans-serif;
   font-size: 120px;
   /* піджени під свій дизайн */
-  color: #383838;
+  color: #9C9C9C;
   /* як на макеті */
   text-transform: uppercase;
   margin-right: 10px;
@@ -321,6 +334,8 @@ position: relative;
   }
 }
 .hero_social{
+  min-width: fit-content;
+  width: 100%;
   opacity: 0.7;
   transition: 0.25s;
 }
@@ -351,10 +366,6 @@ position: relative;
   align-items: center;
 }
 
-.hero:has(.flex_between:hover){
-
-
-}
 .container{
   max-width: 1392px;
   width: 100%;
@@ -384,8 +395,7 @@ position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 32px;
-  height: 80vh;
+  padding: 40px;
 
   clip-path: polygon(25px 0,
     calc(100% - 25px) 0,
@@ -396,4 +406,20 @@ position: relative;
     0 calc(100% - 25px),
     0 25px);
   background-color: #131313;
+}
+
+.aboutRow{
+  display: flex;
+  justify-content: space-between;
+}
+
+.about_us_add{
+  display: flex;
+  font-size: 24px;
+  color: #C92020;
+  font-family: 'Furore';
+}
+
+.about_us_add img{
+  margin-right: 10px;
 }
