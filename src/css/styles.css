@@ -55,6 +55,7 @@ img {
 
 body {
   background-color: #0D0D0D;
+  font-family: 'Furore';
 }
 
 @font-face {
@@ -308,7 +309,7 @@ position: relative;
 
 .khorne-line__inner {
   display: inline-block;
-  animation: khorne-scroll 20s linear infinite;
+  animation: khorne-scroll 40s linear infinite;
 }
 
 .khorne-line__inner span {
@@ -336,7 +337,7 @@ position: relative;
 .hero_social{
   min-width: fit-content;
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.9;
   transition: 0.25s;
 }
 .hero_social:hover{
@@ -419,8 +420,106 @@ position: relative;
   font-size: 24px;
   color: #C92020;
   font-family: 'Furore';
+  align-items: center;
 }
 
-.about_us_add img{
+.about_us_add_left{
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
+}
+.about_us_add_right {
+  width: 20px;
+    height: 20px;
+  margin-left: 10px;
+}
+.about_us_add p{
+  white-space: nowrap;
+}
+
+
+.donate{
+  max-width: 1392px;
+  width: 100%;
+  margin: 0 auto;
+}
+.about_us{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.donate_left_cT_item{
+  position: relative;
+}
+.about_mainLogo_circle{
+  width: 100%;
+  background-image: url("../img/circle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+.about_mainLogo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about_mainLogo_h2{
+  font-weight: 100;
+  font-size: 3.7vw;
+  color: white;
+  margin-bottom: -80px;
+}
+.about_mainLogo{
+  margin: 30px 0px;
+}
+.about_mainLogo_p{
+  font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+
+    color: white;
+    max-width: 700px;
+    text-align: center;
+    margin-top: -60px;
+}
+.about_mainLogo_circle_Logo{
+  width: 200px;
+}
+.iconsRow{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0px 60px 0px;
+  width: 80%;
+}
+.donate_left_chooseType{
+  display: flex;
+  justify-content: space-between;
+}
+.donate_left_cT_item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.donate_left_cT_item_icon{
+  height: 25px;
+}
+.donate_left{
+  width: 50%;
+}
+.donate_left_cT_item p{
+  font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
 }
