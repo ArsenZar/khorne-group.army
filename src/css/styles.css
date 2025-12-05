@@ -613,7 +613,6 @@ position: relative;
   width: 100%;
 }
 .donate_right_img{
-  background-image: url("../img/dronBG.png");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -725,4 +724,85 @@ position: relative;
   padding: 15px;
   border-radius: 16px;
   text-align: center;
+}
+
+/* Vacancies */
+
+.vacancies{
+  max-width: 1392px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  height: 60vh;
+}
+.vacancies_item{
+  width: 33.33%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+
+  clip-path: polygon(25px 0,
+        calc(100% - 25px) 0,
+        100% 25px,
+        100% calc(100% - 25px),
+        calc(100% - 25px) 100%,
+        25px 100%,
+        0 calc(100% - 25px),
+        0 25px);
+
+  cursor: pointer;
+
+}
+.vacancies_item_ico{
+  width: 40%;
+}
+.vacancies_item p{
+  color: white;
+  text-align: center;
+  font-size: 36px;
+}
+
+.vi1{
+  background-image: url(../img/vi1.png);
+}
+.vi2 {
+  background-image: url(../img/vi2.png);
+}
+.vi3 {
+  background-image: url(../img/vi3.png);
+}
+
+
+.faq{
+  max-width: 1392px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.faq_item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 20px 0px;
+}
+.faq_item h2{
+  width: 60%;
+  font-size: 36px;
+}
+.faq_item p {
+  width: 35%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  opacity: 0.7;
+  margin: 0px 20px;
 }
