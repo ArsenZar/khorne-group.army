@@ -1,4 +1,7 @@
 // src/main.js
+import 'normalize.css';
+import './css/styles.css';
+
 
 async function loadLandingContent() {
   try {
