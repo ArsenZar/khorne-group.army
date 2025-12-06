@@ -2,11 +2,25 @@
 import 'normalize.css';
 import './css/styles.css';
 
+const btnMenu = document.querySelector(".hero_menu");
+const heroNav = document.querySelector(".hero_nav");
+const heroNavClose = document.querySelector(".hero_nav_menu");
+
+btnMenu.addEventListener('click', function () {
+  heroNav.classList.add("hero_nav_active");
+});
+
+heroNavClose.addEventListener('click', function () {
+  heroNav.classList.remove("hero_nav_active");
+});
+
+
+
 
 async function loadLandingContent() {
   try {
     const response = await fetch(
-      "http://localhost:1337/api/articles?populate=image"
+      "http://localhost:1337/api/articles?sort=order:asc&populate=image"
     );
 
     if (!response.ok) {
