@@ -1206,7 +1206,7 @@ footer p{
     z-index: 1;
     min-width: 120px;
     width: 120px;
-    height: 148px;
+    height: 120px;
     position: relative;
     /* сам блок без blur, можна фон, бордери, контент і т.д. */
     z-index: 0;
