@@ -202,7 +202,7 @@ background-image: url(../img/lang_border_active.png);
   padding: 50px 10%;
 }
 .navList{
-  font-size: 70px;
+  font-size: 60px;
   color: white;
 }
 .navList li{
@@ -334,6 +334,13 @@ position: relative;
   opacity: 1;
 }
 
+.newsMain_blog_item_play:hover>.button_play {
+  opacity: 1;
+}
+.newsMain_blog_item_play:hover>.button_play {
+  transform: scale(1.05);
+}
+
 
 .button_menu,
 .button_play {
@@ -436,15 +443,16 @@ position: relative;
 }
 
 .hero_social_overlay{
-  font-size: 2vw;
+  font-size: 24px;
   color: white;
   display: flex;
   font-family: 'Furore';
-  padding: 20px;
+  padding: 20px 35px;
   align-items: center;
   justify-content: center;
 }
 .hero_social_overlay img{
+  width: 30px;
   margin-right: 12px;
 }
 
@@ -533,7 +541,8 @@ position: relative;
 
 
 .donate{
-  max-width: 1392px;
+  max-width: 1432px;
+  padding: 0px 20px;
   width: 100%;
   margin: 0 auto;
   margin-bottom: 70px;
@@ -585,7 +594,8 @@ position: relative;
     margin-top: -60px;
 }
 .about_mainLogo_circle_Logo{
-  width: 200px;
+    width: 15vw;
+    max-width: 200px;
 }
 .iconsRow{
   display: flex;
@@ -814,9 +824,69 @@ position: relative;
 }
 .newsMain_blog_item{
   width: 30%;
-  height: 500px;
+  height: 470px;
   border-radius: 30px;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.nbi_bg1{
+  background-image: url('../img/nbi_bg1.png');
+}
+.nbi_bg2 {
+  background-image: url('../img/nbi_bg2.png');
+}
+.nbi_bg3 {
+  background-image: url('../img/nbi_bg3.png');
+}
+.newsMain_blog_item_ico{
+  width: 25px;
+}
+.newsMain_blog_item_play{
+  z-index: 1;
+    min-width: 110px;
+    width: 110px;
+    height: 110px;
+    position: relative;
+    /* сам блок без blur, можна фон, бордери, контент і т.д. */
+    z-index: 0;
+    overflow: hidden;
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.newsMain_blog_item_play::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* твій полігон з кутами по 15px, наприклад */
+  clip-path: polygon(15px 0,
+      133px 0,
+      148px 15px,
+      148px 133px,
+      133px 148px,
+      15px 148px,
+      0 133px,
+      0 15px);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  background: rgba(225, 225, 225, 0.05);
+  /* легке затемнення, за бажанням */
+  z-index: -1;
+  /* щоб контент був над цим шаром */
+}
+.newsMain_blog_item p{
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 .newsMain_social{
   display: flex;
@@ -944,12 +1014,12 @@ position: relative;
 }
 
 footer{
-  max-width: 1392px;
+  max-width: 1432px;
+  padding: 16px 20px;
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 16px 0px;
     align-items: center;
 }
 footer p{
@@ -989,7 +1059,7 @@ footer p{
     margin: 0;
   }
   .iconsRow_ico{
-    width: 120px;
+    width: 110px;
   }
   .about_us_add{
     font-size: 18px;
@@ -1030,9 +1100,6 @@ footer p{
   }
   .manu_navLink{
     padding: 35px 10%;
-  }
-  .navList{
-    font-size: 50px;
   }
   .stick{
     height: 20vh;
@@ -1080,8 +1147,97 @@ footer p{
   .vacancies_item{
    padding: 30px;
   }
+  .about_mainLogo_circle_Logo{
+    width: 20vw;
+  }
+    .about_mainLogo_h2{
+      font-size: 6vw;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 510px) {
+  .lang{
+    display: none;
+  }
+  .hero_play{
+    display: none;
+  }
+  .hero_social_overlay{
+    padding: 20px;
+  }
+  .horizontal_stroke{
+    display: none;
+  }
+  .hero_social{
+    width: fit-content;
+  }
+  .flex_between{
+    gap: 20px;
+  }
+  .flex_between{
+    justify-content: space-around;
+  }
+  .stick_owerlay{
+    display: none;
+  }
+  .hero{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .hero_menu{
+    transform: scale(0.8);
+  }
+  .khorne-line__inner span{
+    font-size: 80px;
+  }
+  .wrapper_bottomHiro{
+    font-size: 18px;
+  }
+  .wrapper_bottomHiro img{
+    width: 18px;
+  }
+  .wrapper_bottomHiro{
+    align-items: center;
+  }
+  .hero_playMOBILE {
+    z-index: 1;
+    min-width: 120px;
+    width: 120px;
+    height: 148px;
+    position: relative;
+    /* сам блок без blur, можна фон, бордери, контент і т.д. */
+    z-index: 0;
+    overflow: hidden;
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+  }
+    .hero_playMOBILE::before {
+      content: "";
+      position: absolute;
+      inset: 0;
 
+      /* твій полігон з кутами по 15px, наприклад */
+      clip-path: polygon(15px 0,
+          133px 0,
+          148px 15px,
+          148px 133px,
+          133px 148px,
+          15px 148px,
+          0 133px,
+          0 15px);
+
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+
+      background: rgba(225, 225, 225, 0.05);
+      /* легке затемнення, за бажанням */
+      z-index: -1;
+      /* щоб контент був над цим шаром */
+    }
 }
