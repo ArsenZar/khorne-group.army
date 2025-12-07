@@ -1050,6 +1050,9 @@ footer p{
 .iconsRow_ico {
   width: 180px;
 }
+.hero_playMOBILE{
+  display: none;
+}
 
 @media (max-width: 768px) {
   .hero_social_overlay p {
@@ -1239,5 +1242,9 @@ footer p{
       /* легке затемнення, за бажанням */
       z-index: -1;
       /* щоб контент був над цим шаром */
+    }
+    .descMobPlay{
+      display: flex;
+      justify-content: space-between;
     }
 }
