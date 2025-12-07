@@ -1053,6 +1053,9 @@ footer p{
 .hero_playMOBILE{
   display: none;
 }
+.donate_left_bottomInfo_textContainer_button button {
+  color: black;
+}
 
 @media (max-width: 768px) {
   .hero_social_overlay p {
@@ -1166,7 +1169,7 @@ footer p{
     display: none;
   }
   .hero_social_overlay{
-    padding: 20px;
+    padding: 15px;
   }
   .horizontal_stroke{
     display: none;
@@ -1178,17 +1181,17 @@ footer p{
     gap: 20px;
   }
   .flex_between{
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .stick_owerlay{
     display: none;
   }
   .hero{
-    height: 65vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
   }
   .hero_menu{
     transform: scale(0.8);
@@ -1281,10 +1284,10 @@ footer p{
   }
   .donate_left_chooseType{
     flex-wrap: nowrap;
-      justify-content: flex-start;
-      gap: 20px;
-      overflow-x: scroll;
-      padding-bottom: 15px;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow-x: scroll;
+    padding-bottom: 15px;
   }
   .donate_left_bottomInfo_text{
     margin-top: 20px;
@@ -1299,4 +1302,53 @@ footer p{
   .donate_left_bottomInfo_textContainer_button button{
     width: 100%;
   }
+  .donate_left{
+    display: flex;
+    flex-direction: column;
+  }
+  .donate_left_chooseType{
+    order: 2;
+
+  }
+  .donate_left_bottomInfo{
+    order: 1;
+    margin-bottom: 20px;
+  }
+  .wrapper_bottomHiro{
+    margin-bottom: 48px;
+  }
+  .hero_social_overlay img{
+    width: 26px;
+  }
+  .donate_right_img{
+    height: 250px;
+  }
+  .donate_right_item_topInfo_text_main{
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .donate_right_item_topInfo_text_price{
+    font-size: 24px;
+  }
+  .donate_right_item_topInfo_text_price span{
+    font-size: 14px;
+  }
+  .donate_right_item_row{
+    height: 18px;
+  }
+  .donate_right_item_describe{
+    font-size: 14px;
+  }
+  .donate_right_item_topInfo_ico{
+    width: 60px;
+  }
+  .donate_right_item_topInfo{
+    align-items: center;
+  }
+  .donate_right_item{
+    height: 220px;
+  }
+    .vacancies{
+      flex-direction: column;
+    }
 }
