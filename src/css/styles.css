@@ -1178,7 +1178,7 @@ footer p{
     gap: 20px;
   }
   .flex_between{
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .stick_owerlay{
     display: none;
@@ -1220,31 +1220,83 @@ footer p{
     justify-content: center;
     transform: scale(0.8);
   }
-    .hero_playMOBILE::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+  .hero_playMOBILE::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-      /* твій полігон з кутами по 15px, наприклад */
-      clip-path: polygon(15px 0,
-          133px 0,
-          148px 15px,
-          148px 133px,
-          133px 148px,
-          15px 148px,
-          0 133px,
-          0 15px);
+    /* твій полігон з кутами по 15px, наприклад */
+    clip-path: polygon(15px 0,
+        133px 0,
+        148px 15px,
+        148px 133px,
+        133px 148px,
+        15px 148px,
+        0 133px,
+        0 15px);
 
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
-      background: rgba(225, 225, 225, 0.05);
-      /* легке затемнення, за бажанням */
-      z-index: -1;
-      /* щоб контент був над цим шаром */
-    }
-    .descMobPlay{
-      display: flex;
-      justify-content: space-between;
-    }
+    background: rgba(225, 225, 225, 0.05);
+    /* легке затемнення, за бажанням */
+    z-index: -1;
+    /* щоб контент був над цим шаром */
+  }
+  .descMobPlay{
+    display: flex;
+    justify-content: space-between;
+  }
+  .about_us{
+    padding: 25px;
+  }
+  .about_us_add{
+    font-size: 12px;
+  }
+  .about_mainLogo_h2{
+    font-size: 8vw;
+  }
+  .iconsRow{
+    width: 90%;
+    margin: 20px 0px 40px 0px;
+  }
+  .iconsRow_ico{
+    width: 60px;
+  }
+  .about_mainLogo_p{
+    font-size: 14px;
+  }
+  .iconsRow img:nth-child(2n){
+    transform: scale(0.7);
+  }
+  .khorne-line{
+   margin-top: 10px;
+  }
+  .donate_left_cT_item_icon{
+   width: 60px;
+  }
+  .donate_left_cT_item{
+   min-width: fit-content;
+   padding: 20px;
+  }
+  .donate_left_chooseType{
+    flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 20px;
+      overflow-x: scroll;
+      padding-bottom: 15px;
+  }
+  .donate_left_bottomInfo_text{
+    margin-top: 20px;
+  }
+  .donate_left_bottomInfo_textContainer{
+    flex-direction: column;
+  }
+  .donate_left_bottomInfo_textContainer_button{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .donate_left_bottomInfo_textContainer_button button{
+    width: 100%;
+  }
 }
