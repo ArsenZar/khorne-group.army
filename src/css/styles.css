@@ -939,6 +939,9 @@ position: relative;
   flex-direction: column;
   justify-content: space-between;
 }
+.newsMain_social .hero_social{
+  opacity: 1;
+}
 .newsMain_q{
   width: 25%;
 }
