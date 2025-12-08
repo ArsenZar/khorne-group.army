@@ -4,6 +4,52 @@
   | default @import url()
   |============================
 */
+html,
+body {
+  scrollbar-color: transparent #714826;
+  /* «цвет ползунка» | «цвет полосы скроллбара» */
+  scrollbar-width: auto;
+  /* толщина: auto | thin | none */
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  /* ширина для вертикального скролла */
+  height: 0px;
+  /* высота для горизонтального скролла */
+  background-color: transparent;
+}
+
+/* ползунок скроллбара */
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Firefox */
+.donate_left_chooseType {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff rgba(255, 255, 255, 0.3);
+}
+
+/* WebKit (Chrome, Safari) */
+.donate_left_chooseType::-webkit-scrollbar {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* фон */
+}
+
+.donate_left_chooseType::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  /* повзунок */
+  border-radius: 8px;
+}
+
+.donate_left_chooseType::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.3);
+  /* теж фон */
+  border-radius: 8px;
+}
 
 *{
   box-sizing: border-box;
