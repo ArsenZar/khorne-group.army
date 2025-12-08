@@ -1354,6 +1354,13 @@ footer p{
     .vacancies{
       flex-direction: column;
     }
+  .donate_left_chooseType{
+    scroll-snap-type: x mandatory;
+  }
+  .donate_left_cT_item{
+    scroll-snap-align: start;
+    transition: transform 0.5s ease-in-out;
+  }
   .newsMain_blog{
     width: 100%;
     overflow-x: scroll;
@@ -1377,5 +1384,30 @@ footer p{
   .vacancies_item_ico{
     width: 30%;
   }
-
+    .faq_item_text{
+      flex-direction: column;
+    }
+    .faq_item h2{
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+    .faq_item p{
+      width: 100%;
+      font-size: 14px;
+    }
+    .faq_item{
+      align-items: start;
+    }
+    .faq_item img{
+      width: 50px;
+      transform: rotate(180deg);
+    }
+    .lead{
+      margin-bottom: -10px;
+    }
+    .cosialFooter .cosialFooter_item:last-child{
+      margin: 0px;
+    }
 }
