@@ -988,6 +988,10 @@ position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 20px 0px;
 }
+.faq_item_text{
+  display: flex;
+  align-items: center;
+}
 .faq_item h2{
   width: 60%;
   font-size: 36px;
@@ -1287,7 +1291,8 @@ footer p{
     justify-content: flex-start;
     gap: 20px;
     overflow-x: scroll;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+    order: 2;
   }
   .donate_left_bottomInfo_text{
     margin-top: 20px;
@@ -1306,10 +1311,7 @@ footer p{
     display: flex;
     flex-direction: column;
   }
-  .donate_left_chooseType{
-    order: 2;
 
-  }
   .donate_left_bottomInfo{
     order: 1;
     margin-bottom: 20px;
@@ -1337,7 +1339,7 @@ footer p{
     height: 18px;
   }
   .donate_right_item_describe{
-    font-size: 14px;
+    font-size: 12px;
   }
   .donate_right_item_topInfo_ico{
     width: 60px;
@@ -1347,8 +1349,33 @@ footer p{
   }
   .donate_right_item{
     height: 220px;
+    padding: 25px;
   }
     .vacancies{
       flex-direction: column;
     }
+  .newsMain_blog{
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  .newsMain_blog_item{
+    min-width: 70vw;
+    scroll-snap-align: start;
+    transition: transform 0.5s ease-in-out;
+  }
+  .newsMain_blog_item p{
+    font-size: 14px;
+  }
+  .vacancies {
+    height: auto;
+  }
+  .vacancies_item{
+    width: 100%;
+    height: 300px;
+  }
+  .vacancies_item_ico{
+    width: 30%;
+  }
+
 }
