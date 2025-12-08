@@ -1198,7 +1198,9 @@ footer p{
     padding: 20px 20px 40px 20px;
   }
   .hero_menu{
-    transform: scale(0.8);
+    transform: scale(0.6);
+    margin-top: -10px;
+    margin-left: -10px;
   }
   .khorne-line__inner span{
     font-size: 80px;
@@ -1225,7 +1227,9 @@ footer p{
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scale(0.8);
+    transform: scale(0.6);
+    margin-top: -10px;
+    margin-right: -10px;
   }
   .hero_playMOBILE::before {
     content: "";
@@ -1428,5 +1432,32 @@ footer p{
   }
   footer p{
     margin: 5px;
+  }
+  .hero_nav{
+    flex-direction: column;
+  }
+  .hero_nav_menu{
+    width: 110px;
+    min-width: 110px;
+    height: 110px;
+    transform: scale(0.6);
+  }
+  .hero_nav{
+    padding: 15px;
+  }
+  .manu_navLink{
+    padding: 0px 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  .navList{
+    font-size: 9vw;
+    margin-bottom: 20px;
+  }
+  .menu_social{
+    order: 2;
+  }
+  .manu_navLink{
+    order: 1;
   }
 }
