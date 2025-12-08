@@ -1365,6 +1365,11 @@ footer p{
     width: 100%;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .newsMain{
+    gap: 0px;
   }
   .newsMain_blog_item{
     min-width: 70vw;
@@ -1384,30 +1389,44 @@ footer p{
   .vacancies_item_ico{
     width: 30%;
   }
-    .faq_item_text{
-      flex-direction: column;
-    }
-    .faq_item h2{
-      width: 100%;
-      font-size: 16px;
-      margin-bottom: 15px;
-      margin-top: 10px;
-    }
-    .faq_item p{
-      width: 100%;
-      font-size: 14px;
-    }
-    .faq_item{
-      align-items: start;
-    }
-    .faq_item img{
-      width: 50px;
-      transform: rotate(180deg);
-    }
-    .lead{
-      margin-bottom: -10px;
-    }
-    .cosialFooter .cosialFooter_item:last-child{
-      margin: 0px;
-    }
+  .faq_item_text{
+    flex-direction: column;
+  }
+  .faq_item h2{
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  .faq_item p{
+    width: 100%;
+    font-size: 12px;
+  }
+  .faq_item{
+    align-items: start;
+  }
+  .faq_item img{
+    width: 50px;
+    transform: rotate(180deg);
+  }
+  .lead{
+    margin-bottom: -10px;
+  }
+  .cosialFooter .cosialFooter_item:last-child{
+    margin: 0px;
+  }
+  .newsMain_q_threeSoc{
+    margin-bottom: 0px;
+    order: 2;
+  }
+  .newsButton{
+    order: 1;
+    margin-bottom: 50px;
+  }
+  .newsMain_blog_item_play{
+    transform: scale(0.6);
+  }
+  footer p{
+    margin: 5px;
+  }
 }
