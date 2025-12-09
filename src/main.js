@@ -43,9 +43,6 @@ async function loadAllArticles() {
     const attrs = item || {};
     const imgData = item.image.url;
 
-    console.log(imgData);
-
-
     return {
       category: attrs.category || "",   // важливо: це має збігатися з data-category
       title: attrs.title || "",
