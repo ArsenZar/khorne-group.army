@@ -37,6 +37,8 @@ async function loadAllArticles() {
   const json = await res.json();
   const data = json.data || [];
 
+  console.log(data);
+
 
   // Нормалізуємо структуру Strapi → в прості обʼєкти
   articles = data.map(item => {
@@ -50,6 +52,9 @@ async function loadAllArticles() {
       imageUrl: imgData || ""
     };
   });
+
+  console.log(articles);
+
 
   console.log("Normalized articles:", articles);
   return articles;
