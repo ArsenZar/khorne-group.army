@@ -319,9 +319,9 @@ position: relative;
 
 .hero_nav_menu {
   z-index: 1;
-  min-width: 148px;
-  width: 148px;
-  height: 148px;
+  min-width: 146px;
+  width: 146px;
+  height: 146px;
   position: relative;
   /* сам блок без blur, можна фон, бордери, контент і т.д. */
   z-index: 0;
@@ -672,9 +672,6 @@ position: relative;
 .donate_left_cT_item_icon{
   width: 80px;
 }
-.donate_left{
-  width: 50%;
-}
 .donate_left_cT_item p{
   font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -760,7 +757,6 @@ position: relative;
   margin-top: -5px;
 }
 .donate_right{
-  width: 50%;
   padding-left: 25px;
   display: flex;
   flex-direction: column;
@@ -870,7 +866,8 @@ position: relative;
 }
 .newsMain_blog_item{
   width: 30%;
-  height: 470px;
+  max-height: 470px;
+  height: 32vw;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -1109,11 +1106,30 @@ footer p{
 .donate_left_bottomInfo_textContainer_button button {
   color: black;
 }
-
-@media (max-width: 768px) {
+.iconsRow img:nth-child(2n){
+  margin: 10px;
+}
+@media (max-width: 1024px) {
+  .newsMain_blog_item_play{
+    transform: scale(0.5);
+  }
   .hero_social_overlay p {
     display: none;
   }
+  .navList li{
+    font-size: 7vw;
+  }
+  .donate {
+    flex-direction: column;
+    padding: 0px 20px;
+  }
+  .donate_right{
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
   .hero_social_overlay img{
     margin: 0;
   }
@@ -1127,10 +1143,6 @@ footer p{
     .about_us_add_right{
     width: 15px;
     height: 15px;
-  }
-  .donate{
-    flex-direction: column;
-    padding: 0px 20px;
   }
   .donate_left{
     width: 100%;
@@ -1177,7 +1189,7 @@ footer p{
   }
   .newsMain_blog_item{
     width: 33.33%;
-    height: 350px;
+    height: 300px;
   }
   .newsMain_social{
     width: 100%;
@@ -1214,7 +1226,19 @@ footer p{
     }
 }
 
+
+@media (max-width: 612px) {
+  .iconsRow_ico {
+    width: 80px;
+  }
+}
+
+
+
 @media (max-width: 510px) {
+  .hero_nav {
+      flex-direction: column;
+    }
   .lang{
     display: none;
   }
@@ -1426,6 +1450,7 @@ footer p{
   }
   .newsMain_blog_item{
     min-width: 70vw;
+    height: 370px;
     scroll-snap-align: start;
     transition: transform 0.5s ease-in-out;
   }
@@ -1481,9 +1506,6 @@ footer p{
   }
   footer p{
     margin: 5px;
-  }
-  .hero_nav{
-    flex-direction: column;
   }
   .hero_nav_menu{
     width: 110px;
