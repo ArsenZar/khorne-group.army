@@ -275,15 +275,6 @@ background-image: url(../img/lang_border_active.png);
   max-width: 1392px;
   width: 100%;
   margin: 0 auto;
-  background-image: linear-gradient(to top,
-      rgba(0, 0, 0, 0.3),
-      /* низ — чорний на 80% */
-      rgba(0, 0, 0, 0.1)
-      /* верх — чорний на 20% */
-      /* previewBig.gif */
-      /* preview.gif */
-      /* preview2.gif */
-    ),url("../img/mainBG.jpg");
   background-color: rgba(0, 0, 0, 0.0);
   background-position: center;
   background-size: cover;
@@ -300,6 +291,20 @@ background-image: url(../img/lang_border_active.png);
       0 calc(100% - 25px),
       0 25px);
 }
+
+.hero__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Оце аналог background-size: cover */
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+
 
 .hero_menu,
 .hero_play{
@@ -404,6 +409,11 @@ position: relative;
   height: 25vh;
   background-color: rgba(255, 255, 255, 0.5);
 }
+.hero_social > img,
+.cosialFooter_item > img,
+.donate_left_cT_item > img{
+  width: 20px;
+}
 .border_topleft{
   position: absolute;
   top: 0px;
@@ -480,7 +490,7 @@ position: relative;
 .hero_social{
   min-width: fit-content;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.8;
   transition: 0.25s;
 }
 .hero_social:hover{
@@ -600,8 +610,14 @@ position: relative;
   flex-direction: column;
   align-items: center;
 }
+.donate_left{
+  width: 50%;
+}
 .donate_left_cT_item{
   position: relative;
+}
+.donate_left_cT_item_content{
+  text-align: center;
 }
 .about_mainLogo_circle{
   width: 100%;
@@ -757,6 +773,7 @@ position: relative;
   margin-top: -5px;
 }
 .donate_right{
+  width: 50%;
   padding-left: 25px;
   display: flex;
   flex-direction: column;
