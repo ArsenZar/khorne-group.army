@@ -1163,11 +1163,12 @@ footer p{
   }
   .donate_left{
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .donate_right{
     width: 100%;
     padding-left: 0px;
+    margin-top: 0px;
   }
   .donate_left_bottomInfo_text{
       margin-top: 50px;
@@ -1377,7 +1378,7 @@ footer p{
    width: 60px;
   }
   .donate_left_cT_item{
-   min-width: fit-content;
+   min-width: 33%;
    padding: 20px;
   }
   .donate_left_chooseType{
@@ -1408,7 +1409,7 @@ footer p{
 
   .donate_left_bottomInfo{
     order: 1;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .wrapper_bottomHiro{
     margin-bottom: 48px;
