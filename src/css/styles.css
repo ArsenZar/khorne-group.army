@@ -373,7 +373,6 @@ position: relative;
 
 .hero_play:hover,
 .hero_menu:hover{
-  background: rgba(225, 225, 225, 0.07);
   cursor: pointer;
 }
 .hero_play:hover > .button_play,
@@ -1172,13 +1171,34 @@ footer p{
   }
   .donate_left_bottomInfo_text{
       margin-top: 50px;
-    }
+  }
   .hero_menu,
   .hero_play{
     width: 120px;
     min-width: 120px;
     height: 120px;
-    }
+  }
+
+
+
+  .hero_play::before,
+  .hero_menu::before{
+    clip-path: polygon(15px 0,
+          105px 0,
+          120px 15px,
+          120px 105px,
+          105px 120px,
+          15px 120px,
+          0 105px,
+          0 15px);
+
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+
+      background: rgba(225, 225, 225, 0.05);
+      z-index: -1;
+  }
+
   .stick_owerlay{
     width: 120px;
     }
@@ -1328,14 +1348,7 @@ footer p{
     inset: 0;
 
     /* твій полігон з кутами по 15px, наприклад */
-    clip-path: polygon(15px 0,
-        133px 0,
-        148px 15px,
-        148px 133px,
-        133px 148px,
-        15px 148px,
-        0 133px,
-        0 15px);
+    clip-path: polygon(15px 0, 105px 0, 120px 15px, 120px 105px, 105px 120px, 15px 120px, 0 105px, 0 15px);
 
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
