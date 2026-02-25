@@ -238,6 +238,7 @@ background-image: url(../img/lang_border_active.png);
   width: 32px;
   height: 32px;
   transition: 0.25s;
+  opacity: 0.6;
 }
 .menu_social{
   display: flex;
@@ -262,11 +263,10 @@ background-image: url(../img/lang_border_active.png);
   cursor: pointer;
 }
 .hero_nav_menu:hover > .button_menu_close{
-  transform: scale(1.1);
+  transform: scale(1.2);
+  opacity: 1;
 }
-.hero_nav_menu:hover{
-  background-color: rgba(255, 255, 255, 0.1);
-}
+
 
 .hero{
   z-index: 0;
@@ -371,9 +371,18 @@ position: relative;
         /* щоб контент був над цим шаром */
 }
 
-.hero_play:hover,
-.hero_menu:hover{
+.hero_play:hover > .hero_play::before,
+.hero_menu:hover > .hero_menu::before{
   cursor: pointer;
+
+  clip-path: polygon(15px 0,
+        133px 0,
+        148px 15px,
+        148px 133px,
+        133px 148px,
+        15px 148px,
+        0 133px,
+        0 15px);
 }
 .hero_play:hover > .button_play,
 .hero_menu:hover > .button_menu {
@@ -616,7 +625,11 @@ position: relative;
   position: relative;
 }
 .donate_left_cT_item_content{
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .about_mainLogo_circle{
   width: 100%;
@@ -1143,6 +1156,12 @@ footer p{
     padding-left: 0px;
     margin-top: 20px;
   }
+  .donate_left, .donate_right{
+    width: 100%;
+  }
+  .donate_left_bottomInfo_text{
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1157,8 +1176,8 @@ footer p{
   }
   .about_us_add_left,
     .about_us_add_right{
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
   }
   .donate_left{
     width: 100%;
@@ -1178,9 +1197,6 @@ footer p{
     min-width: 120px;
     height: 120px;
   }
-
-
-
   .hero_play::before,
   .hero_menu::before{
     clip-path: polygon(15px 0,
