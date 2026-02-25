@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const hiro_wrapper = document.querySelector('.hiro_wrapper');
 const start = 100;
-const end = 500;
+const end = 600;
 
 window.addEventListener('scroll', () => {
   let scroll = window.scrollY;
