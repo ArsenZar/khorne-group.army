@@ -109,7 +109,7 @@ window.addEventListener('scroll', () => {
   let progress = (scroll - start) / (end - start);
   progress = Math.min(Math.max(progress, 0), 1);
 
-  const scale = 1 + 0.7 * progress;
+  const scale = 1 + 0.8 * progress;
   const blur = 5 * progress;
   const brightness = 1 - 0.75 * progress;
 
