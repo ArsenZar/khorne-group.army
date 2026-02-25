@@ -1343,7 +1343,7 @@ footer p{
     display: none;
   }
   .hero{
-    height: -webkit-fill-available;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
