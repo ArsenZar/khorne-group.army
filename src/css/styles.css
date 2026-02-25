@@ -573,7 +573,7 @@ position: relative;
 /* About us */
 .about_usSec{
   padding: 20px;
-  margin-top: 100vh;
+  margin-top: 100dvh;
   background: #0D0D0D;
   position: relative;
   z-index: 1;
