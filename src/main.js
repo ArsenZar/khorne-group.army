@@ -98,3 +98,38 @@ items.forEach(item => {
 window.addEventListener("DOMContentLoaded", () => {
   loadCategory("drones");
 });
+
+const hiro_wrapper = document.querySelector('.hiro_wrapper');
+const start = 150;
+const end = 700;
+
+window.addEventListener('scroll', () => {
+  let scroll = window.scrollY;
+
+  let progress = (scroll - start) / (end - start);
+  progress = Math.min(Math.max(progress, 0), 1);
+
+  const scale = 1 + 0.7 * progress;
+  const blur = 5 * progress;
+  const brightness = 1 - 0.7 * progress;
+
+  hiro_wrapper.style.transform = `scale(${scale})`;
+  hiro_wrapper.style.filter = `
+    blur(${blur}px)
+    brightness(${brightness})
+  `;
+});
+
+
+// function update() {
+//   let scroll = window.scrollY;
+//   scroll = Math.min(Math.max(scroll, 0), maxScroll);
+
+//   const progress = scroll / maxScroll;
+
+//   const blur = 5 * progress;
+
+//   hiro_wrapper.style.filter = `
+//     blur(${blur}px)
+//   `;
+// }

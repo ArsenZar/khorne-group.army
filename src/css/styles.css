@@ -220,6 +220,7 @@ background-image: url(../img/lang_border_active.png);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.5s;
 }
 .hero_nav_active {
   height: 100% !important;
@@ -277,6 +278,7 @@ background-image: url(../img/lang_border_active.png);
 .mainSec {
   padding: 0px 20px;
   height: -webkit-fill-available;
+  transition: 0.5s;
 }
 .hero{
   display: flex;
@@ -484,6 +486,7 @@ position: relative;
   overflow: hidden;
   white-space: nowrap;
   padding-bottom: 50px;
+  z-index: -1;
   /* твій фон знизу */
 }
 
@@ -571,7 +574,7 @@ position: relative;
 .about_usSec{
   padding: 20px;
   margin-top: 100vh;
-  background: black;
+  background: #0D0D0D;
   position: relative;
   z-index: 1;
 }
@@ -1340,7 +1343,7 @@ footer p{
     display: none;
   }
   .hero{
-    height: 70vh;
+    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
