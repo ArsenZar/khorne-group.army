@@ -111,7 +111,7 @@ window.addEventListener('scroll', () => {
 
   const scale = 1 + 0.7 * progress;
   const blur = 5 * progress;
-  const brightness = 1 - 0.7 * progress;
+  const brightness = 1 - 0.8 * progress;
 
   hiro_wrapper.style.transform = `scale(${scale})`;
   hiro_wrapper.style.filter = `
