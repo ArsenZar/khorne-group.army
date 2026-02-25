@@ -220,7 +220,7 @@ background-image: url(../img/lang_border_active.png);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .hero_nav_active {
   height: 100% !important;
@@ -574,6 +574,7 @@ position: relative;
 .about_usSec{
   padding: 20px;
   margin-top: 100dvh;
+  background-color: #0D0D0D;
   position: relative;
   z-index: 1;
 }
