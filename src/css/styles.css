@@ -317,7 +317,7 @@ background-image: url(../img/lang_border_active.png);
   object-fit: cover;
   /* Оце аналог background-size: cover */
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: -3;
 }
 
 
