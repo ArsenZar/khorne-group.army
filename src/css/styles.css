@@ -485,7 +485,7 @@ position: relative;
 .khorne-line {
   overflow: hidden;
   white-space: nowrap;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   z-index: -1;
   /* твій фон знизу */
 }
@@ -565,7 +565,7 @@ position: relative;
   color: white;
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
+  padding-top: 15px;
   border-top: 1px solid #FAE9E9;
   margin-bottom: 20px;
 }
@@ -574,7 +574,6 @@ position: relative;
 .about_usSec{
   padding: 20px;
   margin-top: 100dvh;
-  background: #0D0D0D;
   position: relative;
   z-index: 1;
 }
