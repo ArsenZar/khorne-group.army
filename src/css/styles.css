@@ -1354,6 +1354,9 @@ footer p{
     margin-top: -10px;
     margin-left: -10px;
   }
+  div.zbory {
+    margin-top: 25px;
+  }
   .khorne-line__inner span{
     font-size: 8dvh;
   }
