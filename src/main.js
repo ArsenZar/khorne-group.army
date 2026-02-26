@@ -100,36 +100,23 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 const hiro_wrapper = document.querySelector('.hiro_wrapper');
-const start = 100;
-const end = 600;
 
 window.addEventListener('scroll', () => {
   let scroll = window.scrollY;
-
-  let progress = (scroll - start) / (end - start);
-  progress = Math.min(Math.max(progress, 0), 1);
-
-  const scale = 1 + 0.8 * progress;
-  const blur = 5 * progress;
-  const brightness = 1 - 0.75 * progress;
-
-  hiro_wrapper.style.transform = `scale(${scale})`;
-  hiro_wrapper.style.filter = `
-    blur(${blur}px)
-    brightness(${brightness})
+  let changes = 500;
+  if (scroll > changes) {
+    hiro_wrapper.style.transform = `scale(1.7)`;
+    hiro_wrapper.style.filter = `
+    blur(5px)
+    brightness(0.4)
   `;
+  } else {
+    hiro_wrapper.style.transform = `scale(1)`;
+    hiro_wrapper.style.filter = `
+    blur(0px)
+    brightness(1)
+    `;
+  }
+
+
 });
-
-
-// function update() {
-//   let scroll = window.scrollY;
-//   scroll = Math.min(Math.max(scroll, 0), maxScroll);
-
-//   const progress = scroll / maxScroll;
-
-//   const blur = 5 * progress;
-
-//   hiro_wrapper.style.filter = `
-//     blur(${blur}px)
-//   `;
-// }
