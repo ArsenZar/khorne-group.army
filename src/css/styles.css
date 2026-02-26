@@ -485,7 +485,7 @@ position: relative;
 .khorne-line {
   overflow: hidden;
   white-space: nowrap;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   z-index: -1;
   /* твій фон знизу */
 }
@@ -1163,6 +1163,9 @@ footer p{
 .iconsRow img:nth-child(2n){
   margin: 10px;
 }
+.hiro_wrapper {
+  will-change: transform, filter;
+}
 @media (max-width: 1024px) {
   .newsMain_blog_item_play{
     transform: scale(0.5);
@@ -1315,6 +1318,9 @@ footer p{
 
 
 @media (max-width: 510px) {
+  .khorne-line{
+    padding-bottom: 40px;
+  }
   .hero_nav {
       flex-direction: column;
     }
