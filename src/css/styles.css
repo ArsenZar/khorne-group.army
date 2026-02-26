@@ -220,7 +220,7 @@ background-image: url(../img/lang_border_active.png);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: 0.3s;
+  transition: 0.8s;
 }
 .hero_nav_active {
   height: 100% !important;
