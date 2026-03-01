@@ -177,7 +177,7 @@
       </div>
     </section>
 
-      <div class="khorne-line">
+      <div class="khorne-line marginBottom">
         <div class="khorne-line__inner">
           <span class="text_stroke">KHORNE</span>
           <span>KHORNE</span>
@@ -603,10 +603,77 @@
 
   <div class="lead">
     <div class="lead_wrapper">
-      <form>
-        <input type="text">
-        <input type="text">
-        <button></button>
+      <form class="contact-form">
+        <div class="contact-formsInputs">
+          <div class="contact-formsInputs-left">
+            <div class="fieldset-form-group">
+
+              <div class="radio-item">
+                <input type="radio" name="questionType" value="consultation" id="radio-item-consalt" required>
+                <label for="radio-item-consalt">
+                  <p>Консультація</p>
+
+                  <img src="./img/border_social.png" class="border_topleft">
+                  <img src="./img/border_social.png" class="border_topright">
+                  <img src="./img/border_social.png" class="border_bottomleft">
+                  <img src="./img/border_social.png" class="border_bottomright">
+                </label>
+              </div>
+
+              <div class="radio-item">
+                <input type="radio" name="questionType" value="support" id="radio-item-help" required>
+                <label for="radio-item-help">
+                  <p>Підтримка</p>
+
+                  <img src="./img/border_social.png" class="border_topleft">
+                  <img src="./img/border_social.png" class="border_topright">
+                  <img src="./img/border_social.png" class="border_bottomleft">
+                  <img src="./img/border_social.png" class="border_bottomright">
+                </label>
+              </div>
+
+              <div class="radio-item">
+                <input type="radio" name="questionType" value="cooperation" id="radio-item-collab" required>
+                <label for="radio-item-collab">
+                  <p>Співпраця</p>
+
+                  <img src="./img/border_social.png" class="border_topleft">
+                  <img src="./img/border_social.png" class="border_topright">
+                  <img src="./img/border_social.png" class="border_bottomleft">
+                  <img src="./img/border_social.png" class="border_bottomright">
+                </label>
+              </div>
+
+            </div>
+
+            <div class="form-contacts">
+              <div class="form-group-contacts">
+                <label for="name">Імʼя</label>
+                <input type="text" id="name" name="name" placeholder="Напишіть ваше Імʼя" required>
+              </div>
+
+              <!-- Телефон -->
+              <div class="form-group-contacts">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="Напишіть ваш Телефон" required>
+              </div>
+            </div>
+          </div>
+          <!-- Повідомлення -->
+          <div class="form-group-messageWrapper">
+            <label class="form-group-message" for="message">Повідомлення</label>
+            <textarea id="message" name="message" rows="4" placeholder="Напишіть ваше повідомлення"></textarea>
+          </div>
+        </div>
+
+        <button type="submit">
+          <p>ЗАЛИШИТИ ЗАЯВКУ</p>
+          <img src="./img/border_mini.png" class="border_topleft">
+          <img src="./img/border_mini.png" class="border_topright">
+          <img src="./img/border_mini.png" class="border_bottomleft">
+          <img src="./img/border_mini.png" class="border_bottomright">
+        </button>
+
       </form>
     </div>
   </div>
